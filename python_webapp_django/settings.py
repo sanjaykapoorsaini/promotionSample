@@ -79,8 +79,15 @@ WSGI_APPLICATION = 'python_webapp_django.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': 'django.db.backends.postgresql',
+        # 'ENGINE': 'django.contrib.gis.db.backends.postgis', # if using GIS features.
+        'NAME': 'morpheus_db',
+        # 'NAME': 'morp_test',
+        'USER': 'morpheus',
+        'PASSWORD': 'Morpheus@123',
+        'HOST': os.environ.get('SQL_HOST', '127.0.0.1'),
+        'PORT': '5432',
+        # 'OPTIONS': {'autocommit': True}
     }
 }
 

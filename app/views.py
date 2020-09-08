@@ -27,7 +27,7 @@ def contact(request):
         'app/contact.html',
         {
             'title':'Contact',
-            'message':'Your contact page.',
+            'message':'Contact page.',
             'year':datetime.now().year,
         }
     )
@@ -40,7 +40,7 @@ def about(request):
         'app/about.html',
         {
             'title':'About',
-            'message':'Your application description page.',
+            'message':'Description page.',
             'year':datetime.now().year,
         }
     )
